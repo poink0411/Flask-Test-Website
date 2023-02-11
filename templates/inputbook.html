@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>책 추가</title>
+</head>
+<body>
+    <h1>새로 들어온 책을 추가해주세요</h1>
+    <form action="/inputbook" method="post">
+        책 이름 <input type="text" name="bookname"/>
+        제출 <input type="submit" />
+    </form>
+    <h2>현재 도서관에 존재하는 책들: {{all_books}}</h2>
+</body>
+</html>

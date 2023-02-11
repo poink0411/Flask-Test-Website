@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<div id="bg"></div>
+
+<form action="http://localhost:5000/login" method="POST" enctype="multipart/form-data">
+  <div class="form-field">
+    <input type="username" name="username" placeholder="사용자 이름" required/>
+  </div>
+  <div class="form-field">
+    <input type="password" name="password" placeholder="비밀번호" required/>
+  </div>
+  <div class="form-field">
+    <button class="btn btn-1" type="submit">로그인</button>
+  </div>
+</form>
+</body>
+{% if error %}
+<script>alert('{{error}}')</script>
+{% endif %}
+</html>

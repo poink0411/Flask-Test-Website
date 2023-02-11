@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="bg"></div>
+<form action="http://localhost:5000/index" method="POST" enctype="multipart/form-data">
+        <button class="btn btn-1" type="submit" name="indextype" value="1">로그인</button>
+        <button class="btn btn-1" type="submit" name="indextype" value="2">회원가입</button>
+</form>
+</body>
+{% if error %}
+<script>alert('{{error}}')</script>
+{% endif %}
+</html>

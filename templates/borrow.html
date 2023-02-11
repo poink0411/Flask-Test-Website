@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행복도서관</title>
+</head>
+<body>
+    <h1>어떤 책을 빌리고 싶으신가요, {{username}}님?</h1>
+    <form action="/borrow/{{username}}" method="post">
+        책 이름 <input type="text" name="bookname"/>
+        <input type="submit"/>
+    </form>
+    <h2>대출 가능한 책 목록: {{books}}</h2>
+</body>
+</html>

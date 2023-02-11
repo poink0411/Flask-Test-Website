@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행복도서관</title>
+</head>
+<body>
+    {% if username != 'admin' %}
+    <h1>행복도서관에 오신걸 환영합니다, {{username}}님</h1>
+    {% else %}
+    <h1>행복도서관 관리자 페이지</h1>
+    {% endif %}
+    <form action="/library/{{username}}" method="post">
+        <button type="submit" name="librarytype" value="1">마이페이지</button>
+        <button type="submit" name="librarytype" value="2">대출하기</button>
+        <button type="submit" name="librarytype" value="3">반납하기</button>
+        {% if username == 'admin' %}
+        <button type="submit" name="librarytype" value="999">책 추가하기</button>
+        {% endif %}
+    </form>
+</body>
+
+
+</html>
